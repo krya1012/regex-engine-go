@@ -25,11 +25,11 @@ pip install -r requirements.txt
 
 ## Stages
 
-| Stage | Feature |
-|-------|---------|
-| 1 | Single character matching, `.` wildcard, empty-string rules |
-| 2 | Equal-length string matching (recursive) |
-| 3 | Different-length strings (sliding window) |
-| 4 | `^` and `$` anchors |
-| 5 | Repetition operators: `?`, `*`, `+` |
-| 6 | Escape sequences (`\`) |
+| Stage | Feature | Status |
+|-------|---------|--------|
+| 1 | Single character matching, `.` wildcard, empty-string rules | ✅ |
+| 2 | Equal-length string matching (recursive) | ✅ |
+| 3 | Different-length strings (sliding window) | ✅ |
+| 4 | `^` and `$` anchors | ✅ |
+| 5 | Repetition operators: `?`, `*`, `+` | ✅ |
+| 6 | Escape sequences (`\`) | ✅ |
