@@ -5,6 +5,11 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+## [0.3.0] — Stage 3: Working with strings of different length
+
+### Added
+- `matchAnywhere`: sliding-window entry point that checks `matchEqual` at every position in the input string
+
 ## [0.2.0] — Stage 2: Matching two equal length strings
 
 ### Added

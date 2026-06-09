@@ -27,9 +27,18 @@ func matchEqual(regex, text string) bool {
 	return matchOne(regex[:1], text[:1]) && matchEqual(regex[1:], text[1:])
 }
 
+func matchAnywhere(regex, text string) bool {
+	for i := 0; i <= len(text); i++ {
+		if matchEqual(regex, text[i:]) {
+			return true
+		}
+	}
+	return false
+}
+
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 	scanner.Scan()
 	parts := strings.SplitN(scanner.Text(), "|", 2)
-	fmt.Println(matchEqual(parts[0], parts[1]))
+	fmt.Println(matchAnywhere(parts[0], parts[1]))
 }
