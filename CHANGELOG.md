@@ -5,6 +5,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+## [0.6.0] — Stage 6: Escaping
+
+### Added
+- `\` escape prefix: treats the following character as a literal, disabling its metacharacter meaning
+- Supports `\.`, `\?`, `\*`, `\+`, `\^`, `\$`, `\\`
+
 ## [0.5.0] — Stage 5: Controlling repetition
 
 ### Added
