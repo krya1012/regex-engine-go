@@ -21,6 +21,9 @@ func matchEqual(regex, text string) bool {
 	if len(regex) == 0 {
 		return true
 	}
+	if regex == "$" && len(text) == 0 {
+		return true
+	}
 	if len(text) == 0 {
 		return false
 	}
@@ -28,6 +31,9 @@ func matchEqual(regex, text string) bool {
 }
 
 func matchAnywhere(regex, text string) bool {
+	if len(regex) > 0 && regex[0] == '^' {
+		return matchEqual(regex[1:], text)
+	}
 	for i := 0; i <= len(text); i++ {
 		if matchEqual(regex, text[i:]) {
 			return true

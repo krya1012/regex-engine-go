@@ -5,6 +5,13 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+## [0.4.0] — Stage 4: Implementing the operators ^ and $
+
+### Added
+- `^` anchor: regex starting with `^` matches only at the beginning of the input
+- `$` anchor: regex ending with `$` matches only at the end of the input
+- Combined `^...$` forces an exact full-string match
+
 ## [0.3.0] — Stage 3: Working with strings of different length
 
 ### Added
