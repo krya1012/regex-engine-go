@@ -24,6 +24,19 @@ func matchEqual(regex, text string) bool {
 	if regex == "$" && len(text) == 0 {
 		return true
 	}
+	if len(regex) >= 2 {
+		switch regex[1] {
+		case '?':
+			return matchEqual(regex[2:], text) ||
+				(len(text) > 0 && matchOne(regex[:1], text[:1]) && matchEqual(regex[2:], text[1:]))
+		case '*':
+			return matchEqual(regex[2:], text) ||
+				(len(text) > 0 && matchOne(regex[:1], text[:1]) && matchEqual(regex, text[1:]))
+		case '+':
+			return len(text) > 0 && matchOne(regex[:1], text[:1]) &&
+				(matchEqual(regex[2:], text[1:]) || matchEqual(regex, text[1:]))
+		}
+	}
 	if len(text) == 0 {
 		return false
 	}

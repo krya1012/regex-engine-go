@@ -5,6 +5,14 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+## [0.5.0] — Stage 5: Controlling repetition
+
+### Added
+- `?` operator: matches the preceding character zero or one time
+- `*` operator: matches the preceding character zero or more times
+- `+` operator: matches the preceding character one or more times
+- All three operators compose with `.` wildcard and `^`/`$` anchors
+
 ## [0.4.0] — Stage 4: Implementing the operators ^ and $
 
 ### Added
